@@ -8,8 +8,9 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 public interface UserAccountrepo extends JpaRepository<UserAccount, Integer> {
-
-
+ 
+ // used to communicate with the database table
+	
 @Modifying
 @Transactional
  @Query("update UserAccount set activeSw=: status when userId=: userId")

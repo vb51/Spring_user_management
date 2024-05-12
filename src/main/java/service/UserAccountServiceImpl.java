@@ -3,16 +3,16 @@ package service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import entity.UserAccount;
 import repo.UserAccountrepo;
 
 @Service
-
 public class UserAccountServiceImpl implements UserAccountService {
 	
-	
+	@Autowired
 	private UserAccountrepo useraccrepo;
 
 	@Override

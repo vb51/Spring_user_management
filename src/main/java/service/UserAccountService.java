@@ -6,6 +6,8 @@ import entity.UserAccount;
 
 
 public interface UserAccountService {
+	
+	// method required to develop this first application in comes under service class
 
     public String saveOrUpdateAcc(UserAccount userAcc);  // Save data
 

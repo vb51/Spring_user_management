@@ -1,6 +1,9 @@
 package com.Vishwas.controllert;
 
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,14 +16,8 @@ import service.UserAccountService;
 @Controller
 
 public class UserAccountController {
-	
-	private final UserAccountService service;
-
-
-    UserAccountController(UserAccountService service) {
-        this.service = service;
-    }
-  
+	@Autowired
+	private  UserAccountService service;
 
 	// Load the form 
 	@GetMapping("/") 
@@ -43,6 +40,12 @@ public class UserAccountController {
 		  
 		 return "index";
 	 }
+	@GetMapping("/users")
+	public String getUser (Model model) {
+		List<UserAccount> userlist= service.getAllUserAccounts();
+		model.addAttribute("user", userlist);
+		return "view-user";
+	}
 	
 	
 }
