@@ -1,4 +1,4 @@
-package service;
+package com.Vishwas.feature.user_management.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import entity.UserAccount;
-import repo.UserAccountrepo;
+import com.Vishwas.feature.user_management.entity.UserAccount;
+import com.Vishwas.feature.user_management.repo.UserAccountrepo;
 
 @Service
 public class UserAccountServiceImpl implements UserAccountService {

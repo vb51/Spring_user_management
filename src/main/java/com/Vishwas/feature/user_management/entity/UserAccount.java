@@ -1,4 +1,4 @@
-package entity;
+package com.Vishwas.feature.user_management.entity;
 
 
 import java.time.LocalDate;
