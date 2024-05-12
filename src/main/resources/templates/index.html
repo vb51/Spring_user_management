@@ -11,36 +11,38 @@
 
 <body>
 	<div class="container mt-5">
-		<h3>User creation</h3>
+		<h3>User Account Form</h3>
+		<p th:text ="${msg}" class="text-success"></p>
+		<form th:action="@{/save-user}" th:object="${user}" method ="post">
        
 	   
 		<form th:action="@{/save-user}" th:object="${user}" method="post">
 			<table>
 				<tr>
 					<td>Fullname</td>
-					<td> <input type="text" th:field="*{user.Fullname}" /></td>
+					<td> <input type="text" field="*{user.Fullname}" /></td>
 					</tr>
 					<tr>
 					<td>Email</td>
-					<td> <input type="email" th:field="*{user.email}" /></td>
+					<td> <input type="email" field="*{user.email}" /></td>
 					</tr>
 					<tr>
 					<td>Phone Number</td>
-					<td> <input type="number" th:field="*{user.Phoneno}" /></td>
+					<td> <input type="number" field="*{user.Phoneno}" /></td>
 					</tr>
 					<tr>
 					<td>ssn</td>
-					<td> <input type="number" th:field="*{user.ssn}" /></td>
+					<td> <input type="number" field="*{user.ssn}" /></td>
 					</tr>
 					<tr>
 					<td>Date of Birth</td>
-					<td> <input type="date" th:field="*{user.dob}" /></td>
+					<td> <input type="date" field="*{user.dob}" /></td>
 					</tr>
 					<tr>
 					<td>Gender</td>
 
-					<td> <input type="radio" th:field="*{user.Gender}" value="M" />Male</td>
-					<td> <input type="radio" th:field="*{user.Gender}" value="Fe" />Fe-male</td>
+					<td> <input type="radio" field="*{user.Gender}" value="M" />Male</td>
+					<td> <input type="radio" field="*{user.Gender}" value="Fe" />Fe-male</td>
 					</tr>
 				</tr>
 

@@ -33,7 +33,7 @@ public class UserAccountController {
 	
 	// catching the data in the form of object and again sending the data to reload the page
 	 public String handleSubmitbutton (@ModelAttribute("user") UserAccount user, Model model ) {
-	
+	  System.out.println(user);
 		String msg = service.saveOrUpdateAcc(user);
 		
 		model.addAttribute("msg", msg);
