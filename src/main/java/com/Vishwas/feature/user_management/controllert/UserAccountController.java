@@ -43,9 +43,9 @@ public class UserAccountController {
 	 }
 	@GetMapping("/users")
 	public String getUser (Model model) {
-		List<UserAccount> userlist= service.getAllUserAccounts();
-		model.addAttribute("user", userlist);
-		return "view-user";
+	    List<UserAccount> userlist= service.getAllUserAccounts();
+	    model.addAttribute("user", userlist);
+	    return "view-user";
 	}
 	
 	
