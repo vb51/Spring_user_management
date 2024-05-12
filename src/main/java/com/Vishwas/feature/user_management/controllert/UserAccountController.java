@@ -1,4 +1,4 @@
-package com.Vishwas.controllert;
+package com.Vishwas.feature.user_management.controllert;
 
 
 import org.springframework.stereotype.Controller;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import entity.UserAccount;
-import service.UserAccountService;
+import com.Vishwas.feature.user_management.entity.UserAccount;
+import com.Vishwas.feature.user_management.service.UserAccountService;
 
 @Controller
 

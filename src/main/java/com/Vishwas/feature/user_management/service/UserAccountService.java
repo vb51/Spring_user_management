@@ -1,10 +1,11 @@
-package service;
+package com.Vishwas.feature.user_management.service;
 
 import java.util.List;
 
-import entity.UserAccount;
+import com.Vishwas.feature.user_management.entity.UserAccount;
+import org.springframework.stereotype.*;
 
-
+@Service
 public interface UserAccountService {
 
     public String saveOrUpdateAcc(UserAccount userAcc);  // Save data
